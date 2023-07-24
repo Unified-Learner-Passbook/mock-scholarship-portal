@@ -3,7 +3,7 @@ import React from 'react'
 function header() {
   return (
         <header>
-            <h1>Mock Form</h1>
+            <h1>Mock Scholarship Form</h1>
         </header>
   )
 }
