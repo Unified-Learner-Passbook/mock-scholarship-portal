@@ -1,15 +1,28 @@
-import React from 'react'
+import { TextField } from "@mui/material";
+import React from "react";
 
 function Form() {
-  return (
-    <div className='simpleform'>
-        <form />
-            <label htmlFor="fname">First name:</label><br />
-            <input type="text" id="fname" name="fname" /><br />
-            <label htmlFor="lname">Last name:</label><br />
-            <input type="text" id="lname" name="lname" />
-    </div>
-  )
+	return (
+		<div className="simpleform">
+			<form />
+      <div style={{ display: 'flex', gap: '16px' }}>
+      <TextField
+        label="First Field"
+        name="id1"
+        fullWidth
+        margin="normal"
+        variant="outlined"
+        />
+        <TextField
+        label="Second Field"
+        name="id2"
+        fullWidth
+        margin="normal"
+        variant="outlined"
+      />
+      </div>
+		</div>
+	);
 }
 
-export default Form
+export default Form;

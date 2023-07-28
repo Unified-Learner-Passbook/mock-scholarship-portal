@@ -1,15 +1,68 @@
-import React from 'react'
+import { TextField } from '@mui/material';
+import Stack from "@mui/material/Stack";
+import React, { useState } from 'react';
 
-function AvsarForm() {
+const AvsarForm = ({ initialData }) => {
+  const [formData, setFormData] = useState(initialData);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
   return (
-    <div className='AvsarForm'>
-        <form />
-            <label for="fname">Alumni Certificate</label>
-            <input type="text" id="fname" name="fname" /><br />
-            <label for="lname">Permanent Residence Certificate</label>
-            <input type="text" id="lname" name="lname" />
-    </div>
-  )
-}
+    <form>
+      <TextField
+        label="ID"
+        name="id"
+        value={formData.id}
+        onChange={handleChange}
+        fullWidth
+        margin="normal"
+        variant="outlined"
+      />
+      <div style={{ display: 'flex', gap: '16px' }}>
+        <TextField
+          label="Grade"
+          name="grade"
+          value={formData.grade}
+          onChange={handleChange}
+          fullWidth
+          margin="normal"
+          variant="outlined"
+        />
+        <TextField
+          label="Programme"
+          name="programme"
+          value={formData.programme}
+          onChange={handleChange}
+          fullWidth
+          margin="normal"
+          variant="outlined"
+        />
+      </div>
+      <div style={{ display: 'flex', gap: '16px' }}>
+        <TextField
+          label="Certifying Institute"
+          name="certifyingInstitute"
+          value={formData.certifyingInstitute}
+          onChange={handleChange}
+          fullWidth
+          margin="normal"
+          variant="outlined"
+        />
+        <TextField
+          label="Evaluating Institute"
+          name="evaluatingInstitute"
+          value={formData.evaluatingInstitute}
+          onChange={handleChange}
+          fullWidth
+          margin="normal"
+          variant="outlined"
+        />
+        </div>
+    </form>
+  );
+};
 
-export default AvsarForm
+export default AvsarForm;
