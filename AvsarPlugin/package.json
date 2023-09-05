@@ -1,0 +1,14 @@
+{
+  "name": "avsar-thirdparty-plugin",
+  "version": "1.0.1",
+  "description": "A plugin for third party websties to request verifiable credentials from a digital wallet.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Akshat Upadhyay",
+  "license": "ISC",
+  "dependencies": {
+    "credential-handler-polyfill": "^3.2.0"
+  }
+}
